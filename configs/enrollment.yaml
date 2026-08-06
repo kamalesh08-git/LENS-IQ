@@ -1,0 +1,14 @@
+# User Enrollment System Configuration
+enrollment:
+  dataset_dir: "dataset"
+  db_path: "dataset/metadata.db"
+  camera_index: 0
+  min_capture_count: 5
+  max_capture_count: 20
+  auto_number_prefix: "img"
+  periocular_crop:
+    y_min_ratio: 0.15
+    y_max_ratio: 0.65
+    target_size:
+      width: 112
+      height: 112

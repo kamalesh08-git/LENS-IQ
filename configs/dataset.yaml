@@ -1,0 +1,22 @@
+# Dataset Engineering Configuration
+dataset:
+  split_ratios:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+  target_resolution:
+    width: 112
+    height: 112
+  preserve_aspect_ratio: false
+  color_space: "BGR"
+  quality:
+    blur_threshold: 10.0
+    min_size_kb: 1.0
+  mask_augmentation:
+    enabled: true
+    mask_types:
+      - "surgical"
+      - "N95"
+      - "cloth"
+    synthetic_ratio: 0.5
+  export_dir: "outputs/datasets/processed"

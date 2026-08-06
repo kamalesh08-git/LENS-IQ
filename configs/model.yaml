@@ -1,0 +1,19 @@
+# Model Architecture & Optimization Configuration
+model:
+  detection:
+    provider: "RetinaFace"
+    det_size: [320, 320]
+    confidence_threshold: 0.50
+  recognition:
+    provider: "InsightFace_IR50"
+    embedding_dimension: 512
+    l2_normalize: true
+  mask_detection:
+    provider: "YOLOv8"
+    weights: "models/yolov8n_mask.pt"
+    onnx: "models/mask_detection.onnx"
+    confidence_threshold: 0.50
+  optimization:
+    device: "cpu"
+    fp16: false
+    onnx_runtime: true

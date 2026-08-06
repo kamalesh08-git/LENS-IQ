@@ -1,0 +1,10 @@
+# Database & FAISS Configuration
+database:
+  sqlite:
+    path: "dataset/metadata.db"
+    timeout: 30.0
+  faiss:
+    index_path: "database/faces.index"
+    mapping_path: "database/faiss_mapping.json"
+    dimension: 512
+    metric: "INNER_PRODUCT"

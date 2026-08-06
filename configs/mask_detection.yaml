@@ -1,0 +1,22 @@
+# YOLOv8 Mask Detection Configuration
+mask_detection:
+  model:
+    weights_path: "models/yolov8n_mask.pt"
+    onnx_path: "models/mask_detection.onnx"
+    input_size: 640
+    conf_threshold: 0.50
+    iou_threshold: 0.45
+    class_labels:
+      0: "Masked"
+      1: "Unmasked"
+  training:
+    epochs: 100
+    batch_size: 16
+    patience: 10
+    amp: true
+    device: "cpu"
+    workers: 4
+    save_dir: "outputs/train_mask"
+  dataset:
+    export_dir: "outputs/datasets/mask_detection"
+    dataset_yaml: "outputs/datasets/mask_detection/dataset.yaml"

@@ -1,0 +1,22 @@
+# System Processing Settings Configuration
+settings:
+  allowed_extensions:
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".bmp"
+  logging_level: "INFO"
+  batch_size: 10
+  number_of_workers: 4
+  min_image_size:
+    width: 32
+    height: 32
+  thresholds:
+    recognition_threshold: 0.50
+    unknown_threshold: 0.40
+    mask_threshold: 0.50
+    top_k: 5
+  cache:
+    enabled: true
+    ttl_seconds: 2.0
+    max_size: 100

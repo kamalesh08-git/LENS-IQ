@@ -1,0 +1,6 @@
+# Project Paths Configuration
+paths:
+  dataset_dir: "data/lfw"
+  output_dir: "outputs"
+  log_dir: "logs"
+  config_dir: "configs"
